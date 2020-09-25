@@ -1,8 +1,8 @@
 function doMath() {
 	var regex = RegExp("[0-9+-/^*%]");
-	if (regex.test(document.getElementById("input").value.replace("^", "**"))) {
+	if (regex.test(document.getElementById("test").value.replace("^", "**"))) {
 		var answer = eval(
-			document.getElementById("input").value.replace("^", "**")
+			document.getElementById("test").value.replace("^", "**")
 		);
 		if (answer !== undefined) {
 			document.getElementById("answer").innerHTML = answer;
