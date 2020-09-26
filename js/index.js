@@ -15,3 +15,11 @@ function doMath() {
 			"Please enter a valid equation.";
 	}
 }
+
+let input = document.querySelector("input");
+input.addEventListener("keyup"),
+	(e) => {
+		if (e.keyCode === 13) {
+			doMath();
+		}
+	};
