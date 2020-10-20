@@ -1,5 +1,7 @@
 function doMath() {
+	// check for valid input | disallow basic injection
 	var regex = RegExp("[0-9+-/^*%]");
+	// replace '^' with '**' for user input
 	if (regex.test(document.getElementById("test").value.replace("^", "**"))) {
 		var answer = eval(
 			document.getElementById("test").value.replace("^", "**")
@@ -16,6 +18,7 @@ function doMath() {
 	}
 }
 
+// activates doMath() if uesr presses the 'enter' key
 let input = document.querySelector("input");
 input.addEventListener("keyup"),
 	(e) => {
