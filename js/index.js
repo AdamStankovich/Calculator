@@ -1,3 +1,6 @@
+
+var lastanswer;
+
 function doMath() {
 	// check for valid input | disallow basic injection
 	var regex = RegExp("[0-9+-/^*%]");
@@ -8,6 +11,7 @@ function doMath() {
 		);
 		if (answer !== undefined) {
 			document.getElementById("answer").innerHTML = answer;
+			lastanswer = answer;
 		} else {
 			document.getElementById("answer").innerHTML =
 				"Please enter an equation into the text field.";
@@ -18,11 +22,19 @@ function doMath() {
 	}
 }
 
+var memory;
+function addToMemory() {
+	memory = lastanswer;
+}
+
+function recallMemory() {
+	document.getElementById("test").value = memory;
+}
+
 // activates doMath() if uesr presses the 'enter' key
 let input = document.querySelector("input");
-input.addEventListener("keyup"),
-	(e) => {
-		if (e.keyCode === 13) {
+input.addEventListener("keyup", function (e) {
+		if (e.key === "Enter") {
 			doMath();
 		}
-	};
+	});	

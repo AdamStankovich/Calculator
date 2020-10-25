@@ -34,6 +34,8 @@
     <div class="col-lg-4 col-md-4 col-sm-6 col-cs-10">
         <div><br><br>
             <h2 id="answer"></h2>
+            <button class="btn btn-dark" onclick="addToMemory()" id="memory" type="button">Remember Answer</button>
+            <button class="btn btn-dark" onclick="recallMemory()" id="memoryrecall" type="button">Memory Recall</button>
         </div>
         <hr>
         <p>
