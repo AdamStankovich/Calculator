@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     # Pull numbers/operation from request
     $num1 = $_GET['num1'];
     $num2 = $_GET['num2'];
-    $op = $_GET['operation'];
+    $op = $_GET['op'];
 
     if ($op === '+' || $op === '-' || $op === '*' || $op === '/' || $op === '**') {
 
@@ -19,18 +19,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 $result = $n1 + $n2;
                 break;
             case '-':
-                $result = $n1 + $n2;
+                $result = $n1 - $n2;
                 break;
             case '*':
-                $result = $n1 + $n2;
+                $result = $n1 * $n2;
                 break;
             case '/':
-                $result = $n1 + $n2;
+                $result = $n1 / $n2;
                 break;
             case '**':
-                $result = $n1 ** $n2;
-                break;
-            case '^':
                 $result = $n1 ** $n2;
                 break;
         }
@@ -46,12 +43,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         http_response_code(400);
         exit();
     }
-}
-
-else if ($_SERVER['REQUEST_METHOD'] == 'HEAD') {
+} else if ($_SERVER['REQUEST_METHOD'] == 'HEAD') {
     exit();
-}
-else {
+} else {
     http_response_code(405);
     exit();
 }
