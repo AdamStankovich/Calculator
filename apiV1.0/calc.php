@@ -33,6 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         }
 
         if ($result !== Null) {
+            # set cookie to result for mr.php api functions
+            setcookie('mr', $result);
             echo $result;
         }
         # Something went terribly wrong...
