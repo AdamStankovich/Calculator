@@ -215,6 +215,76 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "200 Response Code Test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bob",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"x\" : 0,\r\n    \"y\" : 7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-east1-speedy-cargo-286917.cloudfunctions.net/TriangleArea",
+					"protocol": "https",
+					"host": [
+						"us-east1-speedy-cargo-286917",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"TriangleArea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400 Response Code Test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bob",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"x\" : 0,\r\n    \"y\" : test\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-east1-speedy-cargo-286917.cloudfunctions.net/TriangleArea",
+					"protocol": "https",
+					"host": [
+						"us-east1-speedy-cargo-286917",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"TriangleArea"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
