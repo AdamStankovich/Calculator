@@ -1,2 +1,2 @@
 # Calculator
-My calculator for IT5236
+Simply Calculator app built with php. Mainly for security practice
